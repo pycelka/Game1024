@@ -15,7 +15,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 
-public class GameActivity extends Activity implements SimpleGestureListener{
+public class GameActivity extends Activity implements SimpleGestureListener {
     private SimpleGestureFilter detector;
 
 
@@ -46,1526 +46,1223 @@ public class GameActivity extends Activity implements SimpleGestureListener{
         Button but15 = (Button) findViewById(R.id.button15);
         Button but16 = (Button) findViewById(R.id.button16);
 
-        if ((isEmpty(but1) == false) & (isEmpty(but2) == false) & (isEmpty(but3) == false) & (isEmpty(but4) == false) & (isEmpty(but5) == false) & (isEmpty(but6) == false) & (isEmpty(but7) == false) & (isEmpty(but8) == false) & (isEmpty(but9) == false) & (isEmpty(but10) == false) & (isEmpty(but11) == false) & (isEmpty(but12) == false) & (isEmpty(but13) == false) & (isEmpty(but14) == false) & (isEmpty(but15) == false) & (isEmpty(but16) == false))
-        {
+        if ((isEmpty(but1) == false) & (isEmpty(but2) == false) & (isEmpty(but3) == false) & (isEmpty(but4) == false) & (isEmpty(but5) == false) & (isEmpty(but6) == false) & (isEmpty(but7) == false) & (isEmpty(but8) == false) & (isEmpty(but9) == false) & (isEmpty(but10) == false) & (isEmpty(but11) == false) & (isEmpty(but12) == false) & (isEmpty(but13) == false) & (isEmpty(but14) == false) & (isEmpty(but15) == false) & (isEmpty(but16) == false)) {
             return true;
         } else {
             return false;
         }
     }
-    public void wlewo_1wiersz(){
+
+    public void wlewo_1wiersz() {
         Button but1 = (Button) findViewById(R.id.button);
         Button but2 = (Button) findViewById(R.id.button2);
         Button but3 = (Button) findViewById(R.id.button3);
         Button but4 = (Button) findViewById(R.id.button4);
-        Button but5 = (Button) findViewById(R.id.button5);
-        Button but6 = (Button) findViewById(R.id.button6);
-        Button but7 = (Button) findViewById(R.id.button7);
-        Button but8 = (Button) findViewById(R.id.button8);
-        Button but9 = (Button) findViewById(R.id.button9);
-        Button but10 = (Button) findViewById(R.id.button10);
-        Button but11 = (Button) findViewById(R.id.button11);
-        Button but12 = (Button) findViewById(R.id.button12);
-        Button but13 = (Button) findViewById(R.id.button13);
-        Button but14 = (Button) findViewById(R.id.button14);
-        Button but15 = (Button) findViewById(R.id.button15);
-        Button but16 = (Button) findViewById(R.id.button16);
 
 
-        if (isEmpty(but1)==false){
-            if (isEmpty(but2)==false && (but2.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
-                but2.setText("");
-            }else if (isEmpty(but3)==false && (but3.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
-                but3.setText("");
-            }else if (isEmpty(but4)==false && (but4.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
-                but4.setText("");
-            }
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
         }
-        if (isEmpty(but2)==false){
-            if (isEmpty(but3)==false && (but2.getText().toString().equals(but3.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but2.setText(""+temp);
-                but3.setText("");
-            }else if (isEmpty(but4)==false && (but2.getText().toString().equals(but4.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but2.setText(""+temp);
-                but4.setText("");
-            }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
         }
-        if (isEmpty(but3)==false){
-            if (isEmpty(but4)==false && (but3.getText().toString().equals(but4.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but3.setText(""+temp);
-                but4.setText("");
-            }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
         }
-        if (isEmpty(but1)== true){
-            if(isEmpty(but2)== false){
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
                 but1.setText(but2.getText());
                 but2.setText("");
-            }else if (isEmpty(but3)==false){
+            } else if (isEmpty(but3)==false){
                 but1.setText(but3.getText());
                 but3.setText("");
             } else if (isEmpty(but4)==false){
                 but1.setText(but4.getText());
                 but4.setText("");
             }
-        }else if(isEmpty(but1)==false){
-            if (isEmpty(but2)==true){
-                if (isEmpty(but3)==false){
-                    but2.setText(but3.getText());
-                    but3.setText("");
-                }else if (isEmpty(but4)==false){
-                    but2.setText(but4.getText());
-                    but4.setText("");
-                }
-            }else if (isEmpty(but3)==true){
-                if (isEmpty(but4)==false){
-                    but3.setText(but4.getText());
-                    but4.setText("");
-                }
-            }
-        }
-        
-    }
-    public void wlewo_2wiersz(){
-        Button but1 = (Button) findViewById(R.id.button);
-        Button but2 = (Button) findViewById(R.id.button2);
-        Button but3 = (Button) findViewById(R.id.button3);
-        Button but4 = (Button) findViewById(R.id.button4);
-        Button but5 = (Button) findViewById(R.id.button5);
-        Button but6 = (Button) findViewById(R.id.button6);
-        Button but7 = (Button) findViewById(R.id.button7);
-        Button but8 = (Button) findViewById(R.id.button8);
-        Button but9 = (Button) findViewById(R.id.button9);
-        Button but10 = (Button) findViewById(R.id.button10);
-        Button but11 = (Button) findViewById(R.id.button11);
-        Button but12 = (Button) findViewById(R.id.button12);
-        Button but13 = (Button) findViewById(R.id.button13);
-        Button but14 = (Button) findViewById(R.id.button14);
-        Button but15 = (Button) findViewById(R.id.button15);
-        Button but16 = (Button) findViewById(R.id.button16);
-
-
-
-
-        if (isEmpty(but5)==false){
-            if (isEmpty(but6)==false && (but6.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but6.setText("");
-            }else if (isEmpty(but7)==false && (but7.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but7.setText("");
-            }else if (isEmpty(but8)==false && (but8.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but8.setText("");
-            }
-        }
-        if (isEmpty(but6)==false){
-            if (isEmpty(but7)==false && (but6.getText().toString().equals(but7.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but6.setText(""+temp);
-                but7.setText("");
-            }else if (isEmpty(but8)==false && (but6.getText().toString().equals(but8.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but6.setText(""+temp);
-                but8.setText("");
-            }
-        }
-        if (isEmpty(but7)==false){
-            if (isEmpty(but8)==false && (but7.getText().toString().equals(but8.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but7.setText(""+temp);
-                but8.setText("");
-            }
-        }
-        if (isEmpty(but5)== true){
-            if(isEmpty(but6)== false){
-                but5.setText(but6.getText());
-                but6.setText("");
-            }else if (isEmpty(but7)==false){
-                but5.setText(but7.getText());
-                but7.setText("");
-            } else if (isEmpty(but8)==false){
-                but5.setText(but8.getText());
-                but8.setText("");
-            }
-        }else if(isEmpty(but5)==false){
-            if (isEmpty(but6)==true){
-                if (isEmpty(but7)==false){
-                    but6.setText(but7.getText());
-                    but7.setText("");
-                }else if (isEmpty(but8)==false){
-                    but6.setText(but8.getText());
-                    but8.setText("");
-                }
-            }else if (isEmpty(but7)==true){
-                if (isEmpty(but8)==false){
-                    but7.setText(but8.getText());
-                    but8.setText("");
-                }
-            }
-        }
-    }
-    public void wlewo_3wiersz(){
-        Button but1 = (Button) findViewById(R.id.button);
-        Button but2 = (Button) findViewById(R.id.button2);
-        Button but3 = (Button) findViewById(R.id.button3);
-        Button but4 = (Button) findViewById(R.id.button4);
-        Button but5 = (Button) findViewById(R.id.button5);
-        Button but6 = (Button) findViewById(R.id.button6);
-        Button but7 = (Button) findViewById(R.id.button7);
-        Button but8 = (Button) findViewById(R.id.button8);
-        Button but9 = (Button) findViewById(R.id.button9);
-        Button but10 = (Button) findViewById(R.id.button10);
-        Button but11 = (Button) findViewById(R.id.button11);
-        Button but12 = (Button) findViewById(R.id.button12);
-        Button but13 = (Button) findViewById(R.id.button13);
-        Button but14 = (Button) findViewById(R.id.button14);
-        Button but15 = (Button) findViewById(R.id.button15);
-        Button but16 = (Button) findViewById(R.id.button16);
-
-        if (isEmpty(but9)==false){
-            if (isEmpty(but10)==false && (but10.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but10.setText("");
-            }else if (isEmpty(but11)==false && (but11.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but11.setText("");
-            }else if (isEmpty(but12)==false && (but12.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but12.setText("");
-            }
-        }
-        if (isEmpty(but10)==false){
-            if (isEmpty(but11)==false && (but10.getText().toString().equals(but11.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but10.setText(""+temp);
-                but11.setText("");
-            }else if (isEmpty(but12)==false && (but10.getText().toString().equals(but12.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but10.setText(""+temp);
-                but12.setText("");
-            }
-        }
-        if (isEmpty(but11)==false){
-            if (isEmpty(but12)==false && (but11.getText().toString().equals(but12.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but11.setText(""+temp);
-                but12.setText("");
-            }
-        }
-        if (isEmpty(but9)== true){
-            if(isEmpty(but10)== false){
-                but9.setText(but10.getText());
-                but10.setText("");
-            }else if (isEmpty(but11)==false){
-                but9.setText(but11.getText());
-                but11.setText("");
-            } else if (isEmpty(but12)==false){
-                but9.setText(but12.getText());
-                but12.setText("");
-            }
-        }else if(isEmpty(but9)==false){
-            if (isEmpty(but10)==true){
-                if (isEmpty(but11)==false){
-                    but10.setText(but11.getText());
-                    but11.setText("");
-                }else if (isEmpty(but12)==false){
-                    but10.setText(but12.getText());
-                    but12.setText("");
-                }
-            }else if (isEmpty(but11)==true){
-                if (isEmpty(but12)==false){
-                    but11.setText(but12.getText());
-                    but12.setText("");
-                }
-            }
-        }
-
-
-    }
-    public void wlewo_4wiersz(){
-        Button but1 = (Button) findViewById(R.id.button);
-        Button but2 = (Button) findViewById(R.id.button2);
-        Button but3 = (Button) findViewById(R.id.button3);
-        Button but4 = (Button) findViewById(R.id.button4);
-        Button but5 = (Button) findViewById(R.id.button5);
-        Button but6 = (Button) findViewById(R.id.button6);
-        Button but7 = (Button) findViewById(R.id.button7);
-        Button but8 = (Button) findViewById(R.id.button8);
-        Button but9 = (Button) findViewById(R.id.button9);
-        Button but10 = (Button) findViewById(R.id.button10);
-        Button but11 = (Button) findViewById(R.id.button11);
-        Button but12 = (Button) findViewById(R.id.button12);
-        Button but13 = (Button) findViewById(R.id.button13);
-        Button but14 = (Button) findViewById(R.id.button14);
-        Button but15 = (Button) findViewById(R.id.button15);
-        Button but16 = (Button) findViewById(R.id.button16);
-
-
-        if (isEmpty(but13)==false){
-            if (isEmpty(but14)==false && (but14.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but14.setText("");
-            }else if (isEmpty(but15)==false && (but15.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but15.setText("");
-            }else if (isEmpty(but16)==false && (but16.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but16.setText("");
-            }
-        }
-        if (isEmpty(but14)==false){
-            if (isEmpty(but15)==false && (but14.getText().toString().equals(but15.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but14.setText(""+temp);
-                but15.setText("");
-            }else if (isEmpty(but16)==false && (but14.getText().toString().equals(but16.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but14.setText(""+temp);
-                but16.setText("");
-            }
-        }
-        if (isEmpty(but15)==false){
-            if (isEmpty(but16)==false && (but15.getText().toString().equals(but16.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but15.setText(""+temp);
-                but16.setText("");
-            }
-        }
-        if (isEmpty(but13)== true){
-            if(isEmpty(but14)== false){
-                but13.setText(but14.getText());
-                but14.setText("");
-            }else if (isEmpty(but15)==false){
-                but13.setText(but15.getText());
-                but15.setText("");
-            } else if (isEmpty(but16)==false){
-                but13.setText(but16.getText());
-                but16.setText("");
-            }
-        }else if(isEmpty(but13)==false){
-            if (isEmpty(but14)==true){
-                if (isEmpty(but15)==false){
-                    but14.setText(but15.getText());
-                    but15.setText("");
-                }else if (isEmpty(but16)==false){
-                    but14.setText(but16.getText());
-                    but16.setText("");
-                }
-            }else if (isEmpty(but15)==true){
-                if (isEmpty(but16)==false){
-                    but15.setText(but16.getText());
-                    but16.setText("");
-                }
-            }
-        }
-
-    }
-
-    public void wprawo_1wiersz(){
-        Button but4 = (Button) findViewById(R.id.button);
-        Button but3 = (Button) findViewById(R.id.button2);
-        Button but2 = (Button) findViewById(R.id.button3);
-        Button but1 = (Button) findViewById(R.id.button4);
-        Button but8 = (Button) findViewById(R.id.button5);
-        Button but7 = (Button) findViewById(R.id.button6);
-        Button but6 = (Button) findViewById(R.id.button7);
-        Button but5 = (Button) findViewById(R.id.button8);
-        Button but12 = (Button) findViewById(R.id.button9);
-        Button but11 = (Button) findViewById(R.id.button10);
-        Button but10 = (Button) findViewById(R.id.button11);
-        Button but9 = (Button) findViewById(R.id.button12);
-        Button but16 = (Button) findViewById(R.id.button13);
-        Button but15 = (Button) findViewById(R.id.button14);
-        Button but14 = (Button) findViewById(R.id.button15);
-        Button but13 = (Button) findViewById(R.id.button16);
-
-
-
-
-        if (isEmpty(but1)==false){
-            if (isEmpty(but2)==false && (but2.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
-                but2.setText("");
-            }else if (isEmpty(but3)==false && (but3.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
                 but3.setText("");
-            }else if (isEmpty(but4)==false && (but4.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
                 but4.setText("");
             }
         }
-        if (isEmpty(but2)==false){
-            if (isEmpty(but3)==false && (but2.getText().toString().equals(but3.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but2.setText(""+temp);
-                but3.setText("");
-            }else if (isEmpty(but4)==false && (but2.getText().toString().equals(but4.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but2.setText(""+temp);
-                but4.setText("");
-            }
+
+    }
+    public void wlewo_2wiersz() {
+        Button but1 = (Button) findViewById(R.id.button5);
+        Button but2 = (Button) findViewById(R.id.button6);
+        Button but3 = (Button) findViewById(R.id.button7);
+        Button but4 = (Button) findViewById(R.id.button8);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
         }
-        if (isEmpty(but3)==false){
-            if (isEmpty(but4)==false && (but3.getText().toString().equals(but4.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but3.setText(""+temp);
-                but4.setText("");
-            }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
         }
-        if (isEmpty(but1)== true){
-            if(isEmpty(but2)== false){
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
                 but1.setText(but2.getText());
                 but2.setText("");
-            }else if (isEmpty(but3)==false){
+            } else if (isEmpty(but3)==false){
                 but1.setText(but3.getText());
                 but3.setText("");
             } else if (isEmpty(but4)==false){
                 but1.setText(but4.getText());
                 but4.setText("");
             }
-        }else if(isEmpty(but1)==false){
-            if (isEmpty(but2)==true){
-                if (isEmpty(but3)==false){
-                    but2.setText(but3.getText());
-                    but3.setText("");
-                }else if (isEmpty(but4)==false){
-                    but2.setText(but4.getText());
-                    but4.setText("");
-                }
-            }else if (isEmpty(but3)==true){
-                if (isEmpty(but4)==false){
-                    but3.setText(but4.getText());
-                    but4.setText("");
-                }
-            }
-        }
-
-    }
-    public void wprawo_2wiersz(){
-        Button but4 = (Button) findViewById(R.id.button);
-        Button but3 = (Button) findViewById(R.id.button2);
-        Button but2 = (Button) findViewById(R.id.button3);
-        Button but1 = (Button) findViewById(R.id.button4);
-        Button but8 = (Button) findViewById(R.id.button5);
-        Button but7 = (Button) findViewById(R.id.button6);
-        Button but6 = (Button) findViewById(R.id.button7);
-        Button but5 = (Button) findViewById(R.id.button8);
-        Button but12 = (Button) findViewById(R.id.button9);
-        Button but11 = (Button) findViewById(R.id.button10);
-        Button but10 = (Button) findViewById(R.id.button11);
-        Button but9 = (Button) findViewById(R.id.button12);
-        Button but16 = (Button) findViewById(R.id.button13);
-        Button but15 = (Button) findViewById(R.id.button14);
-        Button but14 = (Button) findViewById(R.id.button15);
-        Button but13 = (Button) findViewById(R.id.button16);
-
-
-
-
-
-        if (isEmpty(but5)==false){
-            if (isEmpty(but6)==false && (but6.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but6.setText("");
-            }else if (isEmpty(but7)==false && (but7.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but7.setText("");
-            }else if (isEmpty(but8)==false && (but8.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but8.setText("");
-            }
-        }
-        if (isEmpty(but6)==false){
-            if (isEmpty(but7)==false && (but6.getText().toString().equals(but7.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but6.setText(""+temp);
-                but7.setText("");
-            }else if (isEmpty(but8)==false && (but6.getText().toString().equals(but8.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but6.setText(""+temp);
-                but8.setText("");
-            }
-        }
-        if (isEmpty(but7)==false){
-            if (isEmpty(but8)==false && (but7.getText().toString().equals(but8.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but7.setText(""+temp);
-                but8.setText("");
-            }
-        }
-
-        if (isEmpty(but5)== true){
-            if(isEmpty(but6)== false){
-                but5.setText(but6.getText());
-                but6.setText("");
-            }else if (isEmpty(but7)==false){
-                but5.setText(but7.getText());
-                but7.setText("");
-            } else if (isEmpty(but8)==false){
-                but5.setText(but8.getText());
-                but8.setText("");
-            }
-        }else if(isEmpty(but5)==false){
-            if (isEmpty(but6)==true){
-                if (isEmpty(but7)==false){
-                    but6.setText(but7.getText());
-                    but7.setText("");
-                }else if (isEmpty(but8)==false){
-                    but6.setText(but8.getText());
-                    but8.setText("");
-                }
-            }else if (isEmpty(but7)==true){
-                if (isEmpty(but8)==false){
-                    but7.setText(but8.getText());
-                    but8.setText("");
-                }
-            }
-        }
-    }
-    public void wprawo_3wiersz(){
-        Button but4 = (Button) findViewById(R.id.button);
-        Button but3 = (Button) findViewById(R.id.button2);
-        Button but2 = (Button) findViewById(R.id.button3);
-        Button but1 = (Button) findViewById(R.id.button4);
-        Button but8 = (Button) findViewById(R.id.button5);
-        Button but7 = (Button) findViewById(R.id.button6);
-        Button but6 = (Button) findViewById(R.id.button7);
-        Button but5 = (Button) findViewById(R.id.button8);
-        Button but12 = (Button) findViewById(R.id.button9);
-        Button but11 = (Button) findViewById(R.id.button10);
-        Button but10 = (Button) findViewById(R.id.button11);
-        Button but9 = (Button) findViewById(R.id.button12);
-        Button but16 = (Button) findViewById(R.id.button13);
-        Button but15 = (Button) findViewById(R.id.button14);
-        Button but14 = (Button) findViewById(R.id.button15);
-        Button but13 = (Button) findViewById(R.id.button16);
-
-
-        if (isEmpty(but9)==false){
-            if (isEmpty(but10)==false && (but10.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but10.setText("");
-            }else if (isEmpty(but11)==false && (but11.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but11.setText("");
-            }else if (isEmpty(but12)==false && (but12.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but12.setText("");
-            }
-        }
-        if (isEmpty(but10)==false){
-            if (isEmpty(but11)==false && (but10.getText().toString().equals(but11.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but10.setText(""+temp);
-                but11.setText("");
-            }else if (isEmpty(but12)==false && (but10.getText().toString().equals(but12.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but10.setText(""+temp);
-                but12.setText("");
-            }
-        }
-        if (isEmpty(but11)==false){
-            if (isEmpty(but12)==false && (but11.getText().toString().equals(but12.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but11.setText(""+temp);
-                but12.setText("");
-            }
-        }
-
-        if (isEmpty(but9)== true){
-            if(isEmpty(but10)== false){
-                but9.setText(but10.getText());
-                but10.setText("");
-            }else if (isEmpty(but11)==false){
-                but9.setText(but11.getText());
-                but11.setText("");
-            } else if (isEmpty(but12)==false){
-                but9.setText(but12.getText());
-                but12.setText("");
-            }
-        }else if(isEmpty(but9)==false){
-            if (isEmpty(but10)==true){
-                if (isEmpty(but11)==false){
-                    but10.setText(but11.getText());
-                    but11.setText("");
-                }else if (isEmpty(but12)==false){
-                    but10.setText(but12.getText());
-                    but12.setText("");
-                }
-            }else if (isEmpty(but11)==true){
-                if (isEmpty(but12)==false){
-                    but11.setText(but12.getText());
-                    but12.setText("");
-                }
-            }
-        }
-
-    }
-    public void wprawo_4wiersz(){
-        Button but4 = (Button) findViewById(R.id.button);
-        Button but3 = (Button) findViewById(R.id.button2);
-        Button but2 = (Button) findViewById(R.id.button3);
-        Button but1 = (Button) findViewById(R.id.button4);
-        Button but8 = (Button) findViewById(R.id.button5);
-        Button but7 = (Button) findViewById(R.id.button6);
-        Button but6 = (Button) findViewById(R.id.button7);
-        Button but5 = (Button) findViewById(R.id.button8);
-        Button but12 = (Button) findViewById(R.id.button9);
-        Button but11 = (Button) findViewById(R.id.button10);
-        Button but10 = (Button) findViewById(R.id.button11);
-        Button but9 = (Button) findViewById(R.id.button12);
-        Button but16 = (Button) findViewById(R.id.button13);
-        Button but15 = (Button) findViewById(R.id.button14);
-        Button but14 = (Button) findViewById(R.id.button15);
-        Button but13 = (Button) findViewById(R.id.button16);
-
-
-        if (isEmpty(but13)==false){
-            if (isEmpty(but14)==false && (but14.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but14.setText("");
-            }else if (isEmpty(but15)==false && (but15.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but15.setText("");
-            }else if (isEmpty(but16)==false && (but16.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but16.setText("");
-            }
-        }
-        if (isEmpty(but14)==false){
-            if (isEmpty(but15)==false && (but14.getText().toString().equals(but15.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but14.setText(""+temp);
-                but15.setText("");
-            }else if (isEmpty(but16)==false && (but14.getText().toString().equals(but16.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but14.setText(""+temp);
-                but16.setText("");
-            }
-        }
-        if (isEmpty(but15)==false){
-            if (isEmpty(but16)==false && (but15.getText().toString().equals(but16.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but15.setText(""+temp);
-                but16.setText("");
-            }
-        }
-        if (isEmpty(but13)== true){
-            if(isEmpty(but14)== false){
-                but13.setText(but14.getText());
-                but14.setText("");
-            }else if (isEmpty(but15)==false){
-                but13.setText(but15.getText());
-                but15.setText("");
-            } else if (isEmpty(but16)==false){
-                but13.setText(but16.getText());
-                but16.setText("");
-            }
-        }else if(isEmpty(but13)==false){
-            if (isEmpty(but14)==true){
-                if (isEmpty(but15)==false){
-                    but14.setText(but15.getText());
-                    but15.setText("");
-                }else if (isEmpty(but16)==false){
-                    but14.setText(but16.getText());
-                    but16.setText("");
-                }
-            }else if (isEmpty(but15)==true){
-                if (isEmpty(but16)==false){
-                    but15.setText(but16.getText());
-                    but16.setText("");
-                }
-            }
-        }
-
-    }
-
-    public void wgore_1wiersz(){
-        Button but1 = (Button) findViewById(R.id.button);
-        Button but5 = (Button) findViewById(R.id.button2);
-        Button but9 = (Button) findViewById(R.id.button3);
-        Button but13 = (Button) findViewById(R.id.button4);
-        Button but2 = (Button) findViewById(R.id.button5);
-        Button but6 = (Button) findViewById(R.id.button6);
-        Button but10 = (Button) findViewById(R.id.button7);
-        Button but14 = (Button) findViewById(R.id.button8);
-        Button but3 = (Button) findViewById(R.id.button9);
-        Button but7 = (Button) findViewById(R.id.button10);
-        Button but11 = (Button) findViewById(R.id.button11);
-        Button but15 = (Button) findViewById(R.id.button12);
-        Button but4 = (Button) findViewById(R.id.button13);
-        Button but8 = (Button) findViewById(R.id.button14);
-        Button but12 = (Button) findViewById(R.id.button15);
-        Button but16 = (Button) findViewById(R.id.button16);
-
-
-
-
-        if (isEmpty(but1)==false){
-            if (isEmpty(but2)==false && (but2.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
-                but2.setText("");
-            }else if (isEmpty(but3)==false && (but3.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
                 but3.setText("");
-            }else if (isEmpty(but4)==false && (but4.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
                 but4.setText("");
             }
-        }
-        if (isEmpty(but2)==false){
-            if (isEmpty(but3)==false && (but2.getText().toString().equals(but3.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but2.setText(""+temp);
-                but3.setText("");
-            }else if (isEmpty(but4)==false && (but2.getText().toString().equals(but4.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but2.setText(""+temp);
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
                 but4.setText("");
             }
-        }
-        if (isEmpty(but3)==false){
-            if (isEmpty(but4)==false && (but3.getText().toString().equals(but4.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but3.setText(""+temp);
-                but4.setText("");
-            }
-        }
 
-        if (isEmpty(but1)== true){
-            if(isEmpty(but2)== false){
+        }
+    }
+    public void wlewo_3wiersz() {
+        Button but1 = (Button) findViewById(R.id.button9);
+        Button but2 = (Button) findViewById(R.id.button10);
+        Button but3 = (Button) findViewById(R.id.button11);
+        Button but4 = (Button) findViewById(R.id.button12);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
                 but1.setText(but2.getText());
                 but2.setText("");
-            }else if (isEmpty(but3)==false){
+            } else if (isEmpty(but3)==false){
                 but1.setText(but3.getText());
                 but3.setText("");
             } else if (isEmpty(but4)==false){
                 but1.setText(but4.getText());
                 but4.setText("");
             }
-        }else if(isEmpty(but1)==false){
-            if (isEmpty(but2)==true){
-                if (isEmpty(but3)==false){
-                    but2.setText(but3.getText());
-                    but3.setText("");
-                }else if (isEmpty(but4)==false){
-                    but2.setText(but4.getText());
-                    but4.setText("");
-                }
-            }else if (isEmpty(but3)==true){
-                if (isEmpty(but4)==false){
-                    but3.setText(but4.getText());
-                    but4.setText("");
-                }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
             }
-        }
-
-    }
-    public void wgore_2wiersz(){
-        Button but1 = (Button) findViewById(R.id.button);
-        Button but5 = (Button) findViewById(R.id.button2);
-        Button but9 = (Button) findViewById(R.id.button3);
-        Button but13 = (Button) findViewById(R.id.button4);
-        Button but2 = (Button) findViewById(R.id.button5);
-        Button but6 = (Button) findViewById(R.id.button6);
-        Button but10 = (Button) findViewById(R.id.button7);
-        Button but14 = (Button) findViewById(R.id.button8);
-        Button but3 = (Button) findViewById(R.id.button9);
-        Button but7 = (Button) findViewById(R.id.button10);
-        Button but11 = (Button) findViewById(R.id.button11);
-        Button but15 = (Button) findViewById(R.id.button12);
-        Button but4 = (Button) findViewById(R.id.button13);
-        Button but8 = (Button) findViewById(R.id.button14);
-        Button but12 = (Button) findViewById(R.id.button15);
-        Button but16 = (Button) findViewById(R.id.button16);
-
-
-
-
-
-        if (isEmpty(but5)==false){
-            if (isEmpty(but6)==false && (but6.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but6.setText("");
-            }else if (isEmpty(but7)==false && (but7.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but7.setText("");
-            }else if (isEmpty(but8)==false && (but8.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but8.setText("");
-            }
-        }
-        if (isEmpty(but6)==false){
-            if (isEmpty(but7)==false && (but6.getText().toString().equals(but7.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but6.setText(""+temp);
-                but7.setText("");
-            }else if (isEmpty(but8)==false && (but6.getText().toString().equals(but8.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but6.setText(""+temp);
-                but8.setText("");
-            }
-        }
-        if (isEmpty(but7)==false){
-            if (isEmpty(but8)==false && (but7.getText().toString().equals(but8.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but7.setText(""+temp);
-                but8.setText("");
-            }
-        }
-
-        if (isEmpty(but5)== true){
-            if(isEmpty(but6)== false){
-                but5.setText(but6.getText());
-                but6.setText("");
-            }else if (isEmpty(but7)==false){
-                but5.setText(but7.getText());
-                but7.setText("");
-            } else if (isEmpty(but8)==false){
-                but5.setText(but8.getText());
-                but8.setText("");
-            }
-        }else if(isEmpty(but5)==false){
-            if (isEmpty(but6)==true){
-                if (isEmpty(but7)==false){
-                    but6.setText(but7.getText());
-                    but7.setText("");
-                }else if (isEmpty(but8)==false){
-                    but6.setText(but8.getText());
-                    but8.setText("");
-                }
-            }else if (isEmpty(but7)==true){
-                if (isEmpty(but8)==false){
-                    but7.setText(but8.getText());
-                    but8.setText("");
-                }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
             }
         }
     }
-    public void wgore_3wiersz(){
-        Button but1 = (Button) findViewById(R.id.button);
-        Button but5 = (Button) findViewById(R.id.button2);
-        Button but9 = (Button) findViewById(R.id.button3);
-        Button but13 = (Button) findViewById(R.id.button4);
-        Button but2 = (Button) findViewById(R.id.button5);
-        Button but6 = (Button) findViewById(R.id.button6);
-        Button but10 = (Button) findViewById(R.id.button7);
-        Button but14 = (Button) findViewById(R.id.button8);
-        Button but3 = (Button) findViewById(R.id.button9);
-        Button but7 = (Button) findViewById(R.id.button10);
-        Button but11 = (Button) findViewById(R.id.button11);
-        Button but15 = (Button) findViewById(R.id.button12);
-        Button but4 = (Button) findViewById(R.id.button13);
-        Button but8 = (Button) findViewById(R.id.button14);
-        Button but12 = (Button) findViewById(R.id.button15);
-        Button but16 = (Button) findViewById(R.id.button16);
-
-
-        if (isEmpty(but9)==false){
-            if (isEmpty(but10)==false && (but10.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but10.setText("");
-            }else if (isEmpty(but11)==false && (but11.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but11.setText("");
-            }else if (isEmpty(but12)==false && (but12.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but12.setText("");
-            }
-        }
-        if (isEmpty(but10)==false){
-            if (isEmpty(but11)==false && (but10.getText().toString().equals(but11.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but10.setText(""+temp);
-                but11.setText("");
-            }else if (isEmpty(but12)==false && (but10.getText().toString().equals(but12.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but10.setText(""+temp);
-                but12.setText("");
-            }
-        }
-        if (isEmpty(but11)==false){
-            if (isEmpty(but12)==false && (but11.getText().toString().equals(but12.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but11.setText(""+temp);
-                but12.setText("");
-            }
-        }
-        if (isEmpty(but9)== true){
-            if(isEmpty(but10)== false){
-                but9.setText(but10.getText());
-                but10.setText("");
-            }else if (isEmpty(but11)==false){
-                but9.setText(but11.getText());
-                but11.setText("");
-            } else if (isEmpty(but12)==false){
-                but9.setText(but12.getText());
-                but12.setText("");
-            }
-        }else if(isEmpty(but9)==false){
-            if (isEmpty(but10)==true){
-                if (isEmpty(but11)==false){
-                    but10.setText(but11.getText());
-                    but11.setText("");
-                }else if (isEmpty(but12)==false){
-                    but10.setText(but12.getText());
-                    but12.setText("");
-                }
-            }else if (isEmpty(but11)==true){
-                if (isEmpty(but12)==false){
-                    but11.setText(but12.getText());
-                    but12.setText("");
-                }
-            }
-        }
-
-    }
-    public void wgore_4wiersz(){
-        Button but1 = (Button) findViewById(R.id.button);
-        Button but5 = (Button) findViewById(R.id.button2);
-        Button but9 = (Button) findViewById(R.id.button3);
-        Button but13 = (Button) findViewById(R.id.button4);
-        Button but2 = (Button) findViewById(R.id.button5);
-        Button but6 = (Button) findViewById(R.id.button6);
-        Button but10 = (Button) findViewById(R.id.button7);
-        Button but14 = (Button) findViewById(R.id.button8);
-        Button but3 = (Button) findViewById(R.id.button9);
-        Button but7 = (Button) findViewById(R.id.button10);
-        Button but11 = (Button) findViewById(R.id.button11);
-        Button but15 = (Button) findViewById(R.id.button12);
-        Button but4 = (Button) findViewById(R.id.button13);
-        Button but8 = (Button) findViewById(R.id.button14);
-        Button but12 = (Button) findViewById(R.id.button15);
-        Button but16 = (Button) findViewById(R.id.button16);
-
-
-        if (isEmpty(but13)==false){
-            if (isEmpty(but14)==false && (but14.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but14.setText("");
-            }else if (isEmpty(but15)==false && (but15.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but15.setText("");
-            }else if (isEmpty(but16)==false && (but16.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but16.setText("");
-            }
-        }
-        if (isEmpty(but14)==false){
-            if (isEmpty(but15)==false && (but14.getText().toString().equals(but15.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but14.setText(""+temp);
-                but15.setText("");
-            }else if (isEmpty(but16)==false && (but14.getText().toString().equals(but16.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but14.setText(""+temp);
-                but16.setText("");
-            }
-        }
-        if (isEmpty(but15)==false){
-            if (isEmpty(but16)==false && (but15.getText().toString().equals(but16.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but15.setText(""+temp);
-                but16.setText("");
-            }
-        }
-
-        if (isEmpty(but13)== true){
-            if(isEmpty(but14)== false){
-                but13.setText(but14.getText());
-                but14.setText("");
-            }else if (isEmpty(but15)==false){
-                but13.setText(but15.getText());
-                but15.setText("");
-            } else if (isEmpty(but16)==false){
-                but13.setText(but16.getText());
-                but16.setText("");
-            }
-        }else if(isEmpty(but13)==false){
-            if (isEmpty(but14)==true){
-                if (isEmpty(but15)==false){
-                    but14.setText(but15.getText());
-                    but15.setText("");
-                }else if (isEmpty(but16)==false){
-                    but14.setText(but16.getText());
-                    but16.setText("");
-                }
-            }else if (isEmpty(but15)==true){
-                if (isEmpty(but16)==false){
-                    but15.setText(but16.getText());
-                    but16.setText("");
-                }
-            }
-        }
-
-    }
-
-
-    public void wdol_1wiersz(){
-        Button but4 = (Button) findViewById(R.id.button);
-        Button but8 = (Button) findViewById(R.id.button2);
-        Button but12 = (Button) findViewById(R.id.button3);
-        Button but16 = (Button) findViewById(R.id.button4);
-        Button but3 = (Button) findViewById(R.id.button5);
-        Button but7 = (Button) findViewById(R.id.button6);
-        Button but11 = (Button) findViewById(R.id.button7);
-        Button but15 = (Button) findViewById(R.id.button8);
-        Button but2 = (Button) findViewById(R.id.button9);
-        Button but6 = (Button) findViewById(R.id.button10);
-        Button but10 = (Button) findViewById(R.id.button11);
-        Button but14= (Button) findViewById(R.id.button12);
+    public void wlewo_4wiersz() {
         Button but1 = (Button) findViewById(R.id.button13);
-        Button but5 = (Button) findViewById(R.id.button14);
-        Button but9 = (Button) findViewById(R.id.button15);
-        Button but13 = (Button) findViewById(R.id.button16);
+        Button but2 = (Button) findViewById(R.id.button14);
+        Button but3 = (Button) findViewById(R.id.button15);
+        Button but4 = (Button) findViewById(R.id.button16);
 
 
-
-        if (isEmpty(but1)==false){
-            if (isEmpty(but2)==false && (but2.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
-                but2.setText("");
-            }else if (isEmpty(but3)==false && (but3.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
-                but3.setText("");
-            }else if (isEmpty(but4)==false && (but4.getText().toString().equals(but1.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but1.setText(""+temp);
-                but4.setText("");
-            }
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
         }
-        if (isEmpty(but2)==false){
-            if (isEmpty(but3)==false && (but2.getText().toString().equals(but3.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but2.setText(""+temp);
-                but3.setText("");
-            }else if (isEmpty(but4)==false && (but2.getText().toString().equals(but4.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but2.setText(""+temp);
-                but4.setText("");
-            }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
         }
-        if (isEmpty(but3)==false){
-            if (isEmpty(but4)==false && (but3.getText().toString().equals(but4.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but3.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but3.setText(""+temp);
-                but4.setText("");
-            }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
         }
-
-        if (isEmpty(but1)== true){
-            if(isEmpty(but2)== false){
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
                 but1.setText(but2.getText());
                 but2.setText("");
-            }else if (isEmpty(but3)==false){
+            } else if (isEmpty(but3)==false){
                 but1.setText(but3.getText());
                 but3.setText("");
             } else if (isEmpty(but4)==false){
                 but1.setText(but4.getText());
                 but4.setText("");
             }
-        }else if(isEmpty(but1)==false){
-            if (isEmpty(but2)==true){
-                if (isEmpty(but3)==false){
-                    but2.setText(but3.getText());
-                    but3.setText("");
-                }else if (isEmpty(but4)==false){
-                    but2.setText(but4.getText());
-                    but4.setText("");
-                }
-            }else if (isEmpty(but3)==true){
-                if (isEmpty(but4)==false){
-                    but3.setText(but4.getText());
-                    but4.setText("");
-                }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
             }
         }
-
     }
-    public void wdol_2wiersz(){
+
+    public void wprawo_1wiersz() {
+        Button but1 = (Button) findViewById(R.id.button4);
+        Button but2 = (Button) findViewById(R.id.button3);
+        Button but3 = (Button) findViewById(R.id.button2);
         Button but4 = (Button) findViewById(R.id.button);
-        Button but8 = (Button) findViewById(R.id.button2);
-        Button but12 = (Button) findViewById(R.id.button3);
-        Button but16 = (Button) findViewById(R.id.button4);
-        Button but3 = (Button) findViewById(R.id.button5);
-        Button but7 = (Button) findViewById(R.id.button6);
-        Button but11 = (Button) findViewById(R.id.button7);
-        Button but15 = (Button) findViewById(R.id.button8);
-        Button but2 = (Button) findViewById(R.id.button9);
-        Button but6 = (Button) findViewById(R.id.button10);
-        Button but10 = (Button) findViewById(R.id.button11);
-        Button but14= (Button) findViewById(R.id.button12);
-        Button but1 = (Button) findViewById(R.id.button13);
-        Button but5 = (Button) findViewById(R.id.button14);
-        Button but9 = (Button) findViewById(R.id.button15);
-        Button but13 = (Button) findViewById(R.id.button16);
 
 
-        if (isEmpty(but5)==false){
-            if (isEmpty(but6)==false && (but6.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but6.setText("");
-            }else if (isEmpty(but7)==false && (but7.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but7.setText("");
-            }else if (isEmpty(but8)==false && (but8.getText().toString().equals(but5.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but5.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but5.setText(""+temp);
-                but8.setText("");
-            }
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
         }
-        if (isEmpty(but6)==false){
-            if (isEmpty(but7)==false && (but6.getText().toString().equals(but7.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but6.setText(""+temp);
-                but7.setText("");
-            }else if (isEmpty(but8)==false && (but6.getText().toString().equals(but8.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but6.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but6.setText(""+temp);
-                but8.setText("");
-            }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
         }
-        if (isEmpty(but7)==false){
-            if (isEmpty(but8)==false && (but7.getText().toString().equals(but8.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but7.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but8.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but7.setText(""+temp);
-                but8.setText("");
-            }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
         }
-
-
-
-
-        if (isEmpty(but5)== true){
-            if(isEmpty(but6)== false){
-                but5.setText(but6.getText());
-                but6.setText("");
-            }else if (isEmpty(but7)==false){
-                but5.setText(but7.getText());
-                but7.setText("");
-            } else if (isEmpty(but8)==false){
-                but5.setText(but8.getText());
-                but8.setText("");
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
             }
-        }else if(isEmpty(but5)==false){
-            if (isEmpty(but6)==true){
-                if (isEmpty(but7)==false){
-                    but6.setText(but7.getText());
-                    but7.setText("");
-                }else if (isEmpty(but8)==false){
-                    but6.setText(but8.getText());
-                    but8.setText("");
-                }
-            }else if (isEmpty(but7)==true){
-                if (isEmpty(but8)==false){
-                    but7.setText(but8.getText());
-                    but8.setText("");
-                }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
             }
         }
     }
-    public void wdol_3wiersz(){
+    public void wprawo_2wiersz() {
+        Button but1 = (Button) findViewById(R.id.button8);
+        Button but2 = (Button) findViewById(R.id.button7);
+        Button but3 = (Button) findViewById(R.id.button6);
+        Button but4 = (Button) findViewById(R.id.button5);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+    public void wprawo_3wiersz() {
+        Button but1 = (Button) findViewById(R.id.button12);
+        Button but2 = (Button) findViewById(R.id.button11);
+        Button but3 = (Button) findViewById(R.id.button10);
+        Button but4 = (Button) findViewById(R.id.button9);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+    public void wprawo_4wiersz() {
+        Button but1 = (Button) findViewById(R.id.button16);
+        Button but2 = (Button) findViewById(R.id.button15);
+        Button but3 = (Button) findViewById(R.id.button14);
+        Button but4 = (Button) findViewById(R.id.button13);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+
+    public void wgore_1wiersz() {
+        Button but1 = (Button) findViewById(R.id.button);
+        Button but2 = (Button) findViewById(R.id.button5);
+        Button but3 = (Button) findViewById(R.id.button9);
+        Button but4 = (Button) findViewById(R.id.button13);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+    public void wgore_2wiersz() {
+        Button but1 = (Button) findViewById(R.id.button2);
+        Button but2 = (Button) findViewById(R.id.button6);
+        Button but3 = (Button) findViewById(R.id.button10);
+        Button but4 = (Button) findViewById(R.id.button14);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+    public void wgore_3wiersz() {
+        Button but1 = (Button) findViewById(R.id.button3);
+        Button but2 = (Button) findViewById(R.id.button7);
+        Button but3 = (Button) findViewById(R.id.button11);
+        Button but4 = (Button) findViewById(R.id.button15);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+    public void wgore_4wiersz() {
+        Button but1 = (Button) findViewById(R.id.button4);
+        Button but2 = (Button) findViewById(R.id.button8);
+        Button but3 = (Button) findViewById(R.id.button12);
+        Button but4 = (Button) findViewById(R.id.button16);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+
+    public void wdol_1wiersz() {
+        Button but1 = (Button) findViewById(R.id.button13);
+        Button but2 = (Button) findViewById(R.id.button9);
+        Button but3 = (Button) findViewById(R.id.button5);
         Button but4 = (Button) findViewById(R.id.button);
-        Button but8 = (Button) findViewById(R.id.button2);
-        Button but12 = (Button) findViewById(R.id.button3);
-        Button but16 = (Button) findViewById(R.id.button4);
-        Button but3 = (Button) findViewById(R.id.button5);
-        Button but7 = (Button) findViewById(R.id.button6);
-        Button but11 = (Button) findViewById(R.id.button7);
-        Button but15 = (Button) findViewById(R.id.button8);
-        Button but2 = (Button) findViewById(R.id.button9);
-        Button but6 = (Button) findViewById(R.id.button10);
-        Button but10 = (Button) findViewById(R.id.button11);
-        Button but14= (Button) findViewById(R.id.button12);
-        Button but1 = (Button) findViewById(R.id.button13);
-        Button but5 = (Button) findViewById(R.id.button14);
-        Button but9 = (Button) findViewById(R.id.button15);
-        Button but13 = (Button) findViewById(R.id.button16);
 
 
-
-        if (isEmpty(but9)==false){
-            if (isEmpty(but10)==false && (but10.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but10.setText("");
-            }else if (isEmpty(but11)==false && (but11.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but11.setText("");
-            }else if (isEmpty(but12)==false && (but12.getText().toString().equals(but9.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but9.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but9.setText(""+temp);
-                but12.setText("");
-            }
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
         }
-        if (isEmpty(but10)==false){
-            if (isEmpty(but11)==false && (but10.getText().toString().equals(but11.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but10.setText(""+temp);
-                but11.setText("");
-            }else if (isEmpty(but12)==false && (but10.getText().toString().equals(but12.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but10.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but10.setText(""+temp);
-                but12.setText("");
-            }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
         }
-        if (isEmpty(but11)==false){
-            if (isEmpty(but12)==false && (but11.getText().toString().equals(but12.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but11.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but12.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but11.setText(""+temp);
-                but12.setText("");
-            }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
         }
-
-        if (isEmpty(but9)== true){
-            if(isEmpty(but10)== false){
-                but9.setText(but10.getText());
-                but10.setText("");
-            }else if (isEmpty(but11)==false){
-                but9.setText(but11.getText());
-                but11.setText("");
-            } else if (isEmpty(but12)==false){
-                but9.setText(but12.getText());
-                but12.setText("");
-            }
-        }else if(isEmpty(but9)==false){
-            if (isEmpty(but10)==true){
-                if (isEmpty(but11)==false){
-                    but10.setText(but11.getText());
-                    but11.setText("");
-                }else if (isEmpty(but12)==false){
-                    but10.setText(but12.getText());
-                    but12.setText("");
-                }
-            }else if (isEmpty(but11)==true){
-                if (isEmpty(but12)==false){
-                    but11.setText(but12.getText());
-                    but12.setText("");
-                }
-            }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
         }
-
-    }
-    public void wdol_4wiersz(){
-        Button but4 = (Button) findViewById(R.id.button);
-        Button but8 = (Button) findViewById(R.id.button2);
-        Button but12 = (Button) findViewById(R.id.button3);
-        Button but16 = (Button) findViewById(R.id.button4);
-        Button but3 = (Button) findViewById(R.id.button5);
-        Button but7 = (Button) findViewById(R.id.button6);
-        Button but11 = (Button) findViewById(R.id.button7);
-        Button but15 = (Button) findViewById(R.id.button8);
-        Button but2 = (Button) findViewById(R.id.button9);
-        Button but6 = (Button) findViewById(R.id.button10);
-        Button but10 = (Button) findViewById(R.id.button11);
-        Button but14= (Button) findViewById(R.id.button12);
-        Button but1 = (Button) findViewById(R.id.button13);
-        Button but5 = (Button) findViewById(R.id.button14);
-        Button but9 = (Button) findViewById(R.id.button15);
-        Button but13 = (Button) findViewById(R.id.button16);
-
-
-
-        if (isEmpty(but13)==false){
-            if (isEmpty(but14)==false && (but14.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but14.setText("");
-            }else if (isEmpty(but15)==false && (but15.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but15.setText("");
-            }else if (isEmpty(but16)==false && (but16.getText().toString().equals(but13.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but13.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but13.setText(""+temp);
-                but16.setText("");
-            }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
         }
-        if (isEmpty(but14)==false){
-            if (isEmpty(but15)==false && (but14.getText().toString().equals(but15.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but14.setText(""+temp);
-                but15.setText("");
-            }else if (isEmpty(but16)==false && (but14.getText().toString().equals(but16.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but14.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but14.setText(""+temp);
-                but16.setText("");
-            }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
         }
-        if (isEmpty(but15)==false){
-            if (isEmpty(but16)==false && (but15.getText().toString().equals(but16.getText().toString())==true )){
-                int temp1 = Integer.parseInt(but15.getText().toString(), 10);
-                int temp2 = Integer.parseInt(but16.getText().toString(), 10);
-                int temp = temp1 + temp2;
-                but15.setText(""+temp);
-                but16.setText("");
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
             }
-        }
-        if (isEmpty(but13)== true){
-            if(isEmpty(but14)== false){
-                but13.setText(but14.getText());
-                but14.setText("");
-            }else if (isEmpty(but15)==false){
-                but13.setText(but15.getText());
-                but15.setText("");
-            } else if (isEmpty(but16)==false){
-                but13.setText(but16.getText());
-                but16.setText("");
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
             }
-        }else if(isEmpty(but13)==false){
-            if (isEmpty(but14)==true){
-                if (isEmpty(but15)==false){
-                    but14.setText(but15.getText());
-                    but15.setText("");
-                }else if (isEmpty(but16)==false){
-                    but14.setText(but16.getText());
-                    but16.setText("");
-                }
-            }else if (isEmpty(but15)==true){
-                if (isEmpty(but16)==false){
-                    but15.setText(but16.getText());
-                    but16.setText("");
-                }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
             }
         }
     }
+    public void wdol_2wiersz() {
+        Button but1 = (Button) findViewById(R.id.button14);
+        Button but2 = (Button) findViewById(R.id.button10);
+        Button but3 = (Button) findViewById(R.id.button6);
+        Button but4 = (Button) findViewById(R.id.button2);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+    public void wdol_3wiersz() {
+        Button but1 = (Button) findViewById(R.id.button15);
+        Button but2 = (Button) findViewById(R.id.button11);
+        Button but3 = (Button) findViewById(R.id.button7);
+        Button but4 = (Button) findViewById(R.id.button3);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+    public void wdol_4wiersz() {
+        Button but1 = (Button) findViewById(R.id.button16);
+        Button but2 = (Button) findViewById(R.id.button12);
+        Button but3 = (Button) findViewById(R.id.button8);
+        Button but4 = (Button) findViewById(R.id.button4);
+
+
+        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but2.setText("");
+        }
+        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but3.setText("");
+        }
+        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but3.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but2.setText("" + temp);
+            but4.setText("");
+        }
+        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+            int temp = temp1 + temp2;
+            but1.setText("" + temp);
+            but4.setText("");
+        }
+        if (isEmpty(but1)==true){
+            if (isEmpty(but2)== false){
+                but1.setText(but2.getText());
+                but2.setText("");
+            } else if (isEmpty(but3)==false){
+                but1.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but1.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but2)==true){
+            if (isEmpty(but3)==false){
+                but2.setText(but3.getText());
+                but3.setText("");
+            } else if (isEmpty(but4)==false){
+                but2.setText(but4.getText());
+                but4.setText("");
+            }
+        } if (isEmpty(but3)==true){
+            if (isEmpty(but4) == false){
+                but3.setText(but4.getText());
+                but4.setText("");
+            }
+        }
+    }
+
+
+
+
+
 
     public void wprawo(){
         wprawo_1wiersz();
@@ -1617,7 +1314,7 @@ public class GameActivity extends Activity implements SimpleGestureListener{
         Button but15 = (Button) findViewById(R.id.button15);
         Button but16 = (Button) findViewById(R.id.button16);
 
-        int min = 0;
+        int min = 1;
         int max = 16;
         Random r = new Random();
         int i = r.nextInt(max - min + 1) + min;
