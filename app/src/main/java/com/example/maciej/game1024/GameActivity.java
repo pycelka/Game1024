@@ -53,6 +53,54 @@ public class GameActivity extends Activity implements SimpleGestureListener {
         }
     }
 
+    public void zliczpunkt(){
+        Button but1 = (Button) findViewById(R.id.button); int temp1 = 0;
+        Button but2 = (Button) findViewById(R.id.button2); int temp2 = 0;
+        Button but3 = (Button) findViewById(R.id.button3); int temp3 = 0;
+        Button but4 = (Button) findViewById(R.id.button4); int temp4 = 0;
+
+        Button but5 = (Button) findViewById(R.id.button5);  int temp5 = 0;
+        Button but6 = (Button) findViewById(R.id.button6); int temp6 = 0;
+        Button but7 = (Button) findViewById(R.id.button7); int temp7 = 0;
+        Button but8 = (Button) findViewById(R.id.button8); int temp8 = 0;
+
+        Button but9 = (Button) findViewById(R.id.button9); int temp9 = 0;
+        Button but10 = (Button) findViewById(R.id.button10); int temp10 = 0;
+        Button but11 = (Button) findViewById(R.id.button11); int temp11 = 0;
+        Button but12 = (Button) findViewById(R.id.button12); int temp12 = 0;
+
+        Button but13 = (Button) findViewById(R.id.button13); int temp13 = 0;
+        Button but14 = (Button) findViewById(R.id.button14); int temp14 = 0;
+        Button but15 = (Button) findViewById(R.id.button15); int temp15 = 0;
+        Button but16 = (Button) findViewById(R.id.button16); int temp16 = 0;
+
+
+        if(isEmpty(but1)== false){temp1 = Integer.parseInt(but1.getText().toString(), 10);} else { temp1 = 0;}
+        if(isEmpty(but2)== false){temp2 = Integer.parseInt(but2.getText().toString(), 10);} else { temp2 = 0;}
+        if(isEmpty(but3)== false){temp3 = Integer.parseInt(but3.getText().toString(), 10);} else { temp3 = 0;}
+        if(isEmpty(but4)== false){temp4 = Integer.parseInt(but4.getText().toString(), 10);} else { temp4 = 0;}
+
+        if(isEmpty(but5)== false){temp5 = Integer.parseInt(but5.getText().toString(), 10);} else { temp5 = 0;}
+        if(isEmpty(but6)== false){temp6 = Integer.parseInt(but6.getText().toString(), 10);} else { temp6 = 0;}
+        if(isEmpty(but7)== false){temp7 = Integer.parseInt(but7.getText().toString(), 10);} else { temp7 = 0;}
+        if(isEmpty(but8)== false){temp8 = Integer.parseInt(but8.getText().toString(), 10);} else { temp8 = 0;}
+
+        if(isEmpty(but9)== false){temp9 = Integer.parseInt(but9.getText().toString(), 10);} else { temp9 = 0;}
+        if(isEmpty(but10)== false){temp10 = Integer.parseInt(but10.getText().toString(), 10);} else { temp10 = 0;}
+        if(isEmpty(but11)== false){temp11 = Integer.parseInt(but11.getText().toString(), 10);} else { temp11 = 0;}
+        if(isEmpty(but12)== false){temp12 = Integer.parseInt(but12.getText().toString(), 10);} else { temp12 = 0;}
+
+        if(isEmpty(but13)== false){temp13 = Integer.parseInt(but13.getText().toString(), 10);} else { temp13 = 0;}
+        if(isEmpty(but14)== false){temp14 = Integer.parseInt(but14.getText().toString(), 10);} else { temp14 = 0;}
+        if(isEmpty(but15)== false){temp15 = Integer.parseInt(but15.getText().toString(), 10);} else { temp15 = 0;}
+        if(isEmpty(but16)== false){temp16 = Integer.parseInt(but16.getText().toString(), 10);} else { temp16 = 0;}
+
+
+            int score = temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + temp10 + temp11 + temp12 + temp13 + temp14+ temp15 + temp16;
+            TextView punkty = (TextView) findViewById(R.id.score_text);
+            punkty.setText(""+score);
+
+    }
     public void wlewo_1wiersz() {
         Button but1 = (Button) findViewById(R.id.button);
         Button but2 = (Button) findViewById(R.id.button2);
@@ -1422,9 +1470,10 @@ public class GameActivity extends Activity implements SimpleGestureListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         setContentView(R.layout.activity_game);
         detector = new SimpleGestureFilter(this,this);
-
+        losuj();
 }
     @Override
     public boolean dispatchTouchEvent(MotionEvent me){
@@ -1442,6 +1491,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
                 if(Sprawdzpelne()== false){
                     wprawo();
                     losuj();
+                    zliczpunkt();
                 }else
                 {
                 }
@@ -1450,6 +1500,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
                 if(Sprawdzpelne()== false){
                     wlewo();
                     losuj();
+                    zliczpunkt();
                 }else
                 {
                 }
@@ -1458,6 +1509,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
                 if(Sprawdzpelne()== false){
                     wdol();
                     losuj();
+                    zliczpunkt();
                 }else
                 {
                 }
@@ -1466,6 +1518,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
                 if(Sprawdzpelne()== false){
                     wgore();
                     losuj();
+                    zliczpunkt();
                 }else
                 {
                 }
@@ -1475,10 +1528,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
         Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onDoubleTap() {
-        Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
-    }
+
 
 
     @Override
