@@ -12,4 +12,33 @@
         android:id="@+id/start_button"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zmiana nazwy"
+        android:id="@+id/name_button"
+        android:layout_below="@+id/start_button"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/name_text"
+        android:text="Nickname"
+        android:layout_marginBottom="108dp"
+        android:layout_above="@+id/start_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wyniki"
+        android:id="@+id/but_wyniki"
+        android:layout_below="@+id/name_button"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

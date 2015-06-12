@@ -4,9 +4,12 @@ import com.example.maciej.game1024.util.SystemUiHider;
 import com.example.maciej.game1024.SimpleGestureFilter.SimpleGestureListener;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -15,11 +18,12 @@ import android.widget.Toast;
 import java.util.Random;
 
 
-public class GameActivity extends Activity implements SimpleGestureListener {
+public class GameActivity extends Activity implements SimpleGestureListener  {
     private SimpleGestureFilter detector;
+    public static int score;
+    public static String name;
 
-
-    private boolean isEmpty(Button etText) {
+    public boolean isEmpty(Button etText) {
         if (etText.getText().toString().trim().length() > 0) {
             return false;
         } else {
@@ -27,7 +31,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
         }
     }
 
-    private boolean Sprawdzpelne() {
+    public boolean Sprawdzpelne() {
 
         Button but1 = (Button) findViewById(R.id.button);
         Button but2 = (Button) findViewById(R.id.button2);
@@ -96,7 +100,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
         if(isEmpty(but16)== false){temp16 = Integer.parseInt(but16.getText().toString(), 10);} else { temp16 = 0;}
 
 
-            int score = temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + temp10 + temp11 + temp12 + temp13 + temp14+ temp15 + temp16;
+            score = temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + temp10 + temp11 + temp12 + temp13 + temp14+ temp15 + temp16;
             TextView punkty = (TextView) findViewById(R.id.score_text);
             punkty.setText(""+score);
 
@@ -107,75 +111,82 @@ public class GameActivity extends Activity implements SimpleGestureListener {
 
 
 
-        if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
-            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-            int temp2 = Integer.parseInt(but2.getText().toString(), 10);
-            int temp = temp1 + temp2;
-            but1.setText("" + temp);
-            but2.setText("");
-        }
-        if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
-            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-            int temp = temp1 + temp2;
-            but2.setText("" + temp);
-            but3.setText("");
-        }
-        if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
-            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-            int temp2 = Integer.parseInt(but3.getText().toString(), 10);
-            int temp = temp1 + temp2;
-            but1.setText("" + temp);
-            but3.setText("");
-        }
-        if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
-            int temp1 = Integer.parseInt(but3.getText().toString(), 10);
-            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-            int temp = temp1 + temp2;
-            but3.setText("" + temp);
-            but4.setText("");
-        }
-        if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
-            int temp1 = Integer.parseInt(but2.getText().toString(), 10);
-            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-            int temp = temp1 + temp2;
-            but2.setText("" + temp);
-            but4.setText("");
-        }
-        if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
-            int temp1 = Integer.parseInt(but1.getText().toString(), 10);
-            int temp2 = Integer.parseInt(but4.getText().toString(), 10);
-            int temp = temp1 + temp2;
-            but1.setText("" + temp);
-            but4.setText("");
-        }
-        if (isEmpty(but1)==true){
-            if (isEmpty(but2)== false){
-                but1.setText(but2.getText());
+
+            if ((but1.getText().toString().equals(but2.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but2) == false)) {
+                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+                int temp2 = Integer.parseInt(but2.getText().toString(), 10);
+                int temp = temp1 + temp2;
+                but1.setText("" + temp);
                 but2.setText("");
-            } else if (isEmpty(but3)==false){
-                but1.setText(but3.getText());
+            }
+            if ((but2.getText().toString().equals(but3.getText().toString()) == true && (isEmpty(but2) == false) && (isEmpty(but3) == false))) {
+                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+                int temp = temp1 + temp2;
+                but2.setText("" + temp);
                 but3.setText("");
-            } else if (isEmpty(but4)==false){
-                but1.setText(but4.getText());
-                but4.setText("");
             }
-        } if (isEmpty(but2)==true){
-            if (isEmpty(but3)==false){
-                but2.setText(but3.getText());
+            if ((but1.getText().toString().equals(but3.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == true)) {
+                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+                int temp2 = Integer.parseInt(but3.getText().toString(), 10);
+                int temp = temp1 + temp2;
+                but1.setText("" + temp);
                 but3.setText("");
-            } else if (isEmpty(but4)==false){
-                but2.setText(but4.getText());
+            }
+            if ((but3.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but3) == false) & (isEmpty(but4) == false)) {
+                int temp1 = Integer.parseInt(but3.getText().toString(), 10);
+                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+                int temp = temp1 + temp2;
+                but3.setText("" + temp);
                 but4.setText("");
             }
-        } if (isEmpty(but3)==true){
-            if (isEmpty(but4) == false){
-                but3.setText(but4.getText());
+            if ((but2.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but2) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true)) {
+                int temp1 = Integer.parseInt(but2.getText().toString(), 10);
+                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+                int temp = temp1 + temp2;
+                but2.setText("" + temp);
                 but4.setText("");
             }
+            if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+                int temp1 = Integer.parseInt(but1.getText().toString(), 10);
+                int temp2 = Integer.parseInt(but4.getText().toString(), 10);
+                int temp = temp1 + temp2;
+                but1.setText("" + temp);
+                but4.setText("");
+            }
+
+            if (isEmpty(but1) == true) {
+                if (isEmpty(but2) == false) {
+                    but1.setText(but2.getText());
+                    but2.setText("");
+                } else if (isEmpty(but3) == false) {
+                    but1.setText(but3.getText());
+                    but3.setText("");
+                } else if (isEmpty(but4) == false) {
+                    but1.setText(but4.getText());
+                    but4.setText("");
+                }
+            }
+            if (isEmpty(but2) == true) {
+                if (isEmpty(but3) == false) {
+                    but2.setText(but3.getText());
+                    but3.setText("");
+                } else if (isEmpty(but4) == false) {
+                    but2.setText(but4.getText());
+                    but4.setText("");
+                }
+
+            }
+            if (isEmpty(but3) == true) {
+                if (isEmpty(but4) == false) {
+                    but3.setText(but4.getText());
+                    but4.setText("");
+                }
+            }
+
         }
 
-    }
+
 
     public void losuj(){
 
@@ -303,13 +314,25 @@ public class GameActivity extends Activity implements SimpleGestureListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent i= getIntent();
+        name = i.getStringExtra("name");
 
 
         setContentView(R.layout.activity_game);
         detector = new SimpleGestureFilter(this,this);
-        // Enable Local Datastore.
-
+        Button koniec = (Button) findViewById(R.id.but_end);
+        koniec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GameActivity.this, Scores.class);
+                intent.putExtra ("name", name);
+                intent.putExtra("score", score);
+                startActivity(intent);
+            }
+        });
         losuj();
+        if (Sprawdzpelne()==true){Intent intent = new Intent(GameActivity.this, Scores.class); startActivity(intent); }
+
 }
     @Override
     public boolean dispatchTouchEvent(MotionEvent me){
@@ -337,6 +360,8 @@ public class GameActivity extends Activity implements SimpleGestureListener {
         Button but16 = (Button) findViewById(R.id.button16);
         String str = "";
 
+
+
         switch (direction) {
 
             case SimpleGestureFilter.SWIPE_RIGHT : str = "Swipe Right";
@@ -344,7 +369,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
                     ruch(but4, but3, but2, but1);
                     ruch(but8, but7, but6, but5);
                     ruch(but12, but11, but10, but9);
-                    ruch(but16,but15, but14, but13);
+                    ruch(but16, but15, but14, but13);
                     losuj();
                     zliczpunkt();
                 } break;
@@ -353,7 +378,7 @@ public class GameActivity extends Activity implements SimpleGestureListener {
                     ruch(but1, but2, but3, but4);
                     ruch(but5, but6, but7, but8);
                     ruch(but9, but10, but11, but12);
-                    ruch(but13,but14, but15, but16);
+                    ruch(but13, but14, but15, but16);
                     losuj();
                     zliczpunkt();
                 } break;
@@ -371,14 +396,17 @@ public class GameActivity extends Activity implements SimpleGestureListener {
                     ruch(but1, but5, but9, but13);
                     ruch(but2, but6, but10, but14);
                     ruch(but3, but7, but11, but15);
-                    ruch(but4,but8, but12, but16);
+                    ruch(but4, but8, but12, but16);
                     losuj();
                     zliczpunkt();
                 } break;
 
+
         }
         //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
+
+
 
 
 
