@@ -4,15 +4,25 @@ import com.example.maciej.game1024.util.SystemUiHider;
 import com.example.maciej.game1024.SimpleGestureFilter.SimpleGestureListener;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.PopupWindow;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Random;
@@ -23,11 +33,100 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
     public static int score = 0;
     public static String name = null;
 
-    public void wyczysc()
-    {
+        public void helper(Button but){
+            if (isEmpty(but)==true){but.setTextColor(Color.parseColor("#ffffffff"));}
+            if (Integer.parseInt(but.getText().toString()) == 1){but.setTextColor(Color.parseColor("#ffffffff"));}
+            if (Integer.parseInt(but.getText().toString()) == 2){but.setTextColor(Color.parseColor("#b3cfba"));}
+            if (Integer.parseInt(but.getText().toString()) == 4){but.setTextColor(Color.parseColor("#a1c1cb"));}
+            if (Integer.parseInt(but.getText().toString()) == 8){but.setTextColor(Color.parseColor("#37c3e0"));}
+            if (Integer.parseInt(but.getText().toString()) == 16){but.setTextColor(Color.parseColor("#147084"));}
+            if (Integer.parseInt(but.getText().toString()) == 32){but.setTextColor(Color.parseColor("#008080"));}
+            if (Integer.parseInt(but.getText().toString()) == 64){but.setTextColor(Color.parseColor("#ffc0cb"));}
+            if (Integer.parseInt(but.getText().toString()) == 128){but.setTextColor(Color.parseColor("#a1c1cb"));}
+            if (Integer.parseInt(but.getText().toString()) == 256){but.setTextColor(Color.parseColor("#a1c1cb"));}
+            if (Integer.parseInt(but.getText().toString()) == 512){but.setTextColor(Color.parseColor("#a1c1cb"));}
+            if (Integer.parseInt(but.getText().toString()) == 1024){but.setTextColor(Color.parseColor("#a1c1cb"));}
+            if (Integer.parseInt(but.getText().toString()) == 2048){but.setTextColor(Color.parseColor("#a1c1cb"));}
+
 
     }
+    public void kolorowanka(){
+        Button but1 = (Button) findViewById(R.id.button);
+        Button but2 = (Button) findViewById(R.id.button2);
+        Button but3 = (Button) findViewById(R.id.button3);
+        Button but4 = (Button) findViewById(R.id.button4);
+        Button but5 = (Button) findViewById(R.id.button5);
+        Button but6 = (Button) findViewById(R.id.button6);
+        Button but7 = (Button) findViewById(R.id.button7);
+        Button but8 = (Button) findViewById(R.id.button8);
+        Button but9 = (Button) findViewById(R.id.button9);
+        Button but10 = (Button) findViewById(R.id.button10);
+        Button but11 = (Button) findViewById(R.id.button11);
+        Button but12 = (Button) findViewById(R.id.button12);
+        Button but13 = (Button) findViewById(R.id.button13);
+        Button but14 = (Button) findViewById(R.id.button14);
+        Button but15 = (Button) findViewById(R.id.button15);
+        Button but16 = (Button) findViewById(R.id.button16);
+        if (isEmpty(but1)==false)helper(but1);
+        if (isEmpty(but2)==false)helper(but2);
+        if (isEmpty(but3)==false)helper(but3);
+        if (isEmpty(but4)==false)helper(but4);
 
+        if (isEmpty(but5)==false)helper(but5);
+        if (isEmpty(but6)==false)helper(but6);
+        if (isEmpty(but7)==false)helper(but7);
+        if (isEmpty(but8)==false)helper(but8);
+
+        if (isEmpty(but9)==false)helper(but9);
+        if (isEmpty(but10)==false)helper(but10);
+        if (isEmpty(but11)==false)helper(but11);
+        if (isEmpty(but12)==false)helper(but12);
+
+        if (isEmpty(but13)==false)helper(but13);
+        if (isEmpty(but14)==false)helper(but14);
+        if (isEmpty(but15)==false)helper(but15);
+        if (isEmpty(but16)==false)helper(but16);
+
+    }
+    public void sound(){
+         MediaPlayer mp1 = MediaPlayer.create(this, R.raw.sound);
+
+        mp1.start();
+        mp1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+
+            }
+
+            ;
+        });
+
+    }
+    public void wyczysc(){
+        Button but1 = (Button) findViewById(R.id.button);
+        Button but2 = (Button) findViewById(R.id.button2);
+        Button but3 = (Button) findViewById(R.id.button3);
+        Button but4 = (Button) findViewById(R.id.button4);
+        Button but5 = (Button) findViewById(R.id.button5);
+        Button but6 = (Button) findViewById(R.id.button6);
+        Button but7 = (Button) findViewById(R.id.button7);
+        Button but8 = (Button) findViewById(R.id.button8);
+        Button but9 = (Button) findViewById(R.id.button9);
+        Button but10 = (Button) findViewById(R.id.button10);
+        Button but11 = (Button) findViewById(R.id.button11);
+        Button but12 = (Button) findViewById(R.id.button12);
+        Button but13 = (Button) findViewById(R.id.button13);
+        Button but14 = (Button) findViewById(R.id.button14);
+        Button but15 = (Button) findViewById(R.id.button15);
+        Button but16 = (Button) findViewById(R.id.button16);
+        but1.setText(""); but2.setText(""); but3.setText(""); but4.setText("");
+        but5.setText(""); but6.setText(""); but7.setText(""); but8.setText("");
+        but9.setText(""); but10.setText(""); but11.setText(""); but12.setText("");
+        but13.setText(""); but14.setText(""); but15.setText(""); but16.setText("");
+
+        TextView punkty = (TextView) findViewById(R.id.score_text);
+        punkty.setText("");
+    }
     public boolean isEmpty(Button etText) {
         if (etText.getText().toString().trim().length() > 0) {
             return false;
@@ -35,7 +134,13 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
             return true;
         }
     }
-
+    public boolean isnot1(Button etText) {
+        if (etText.getText().toString() == "1" ) {
+            return false;
+        } else {
+            return true;
+        }
+    }
     public boolean Sprawdzpelne() {
 
         Button but1 = (Button) findViewById(R.id.button);
@@ -61,8 +166,8 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
             return false;
         }
     }
-
     public void zliczpunkt(){
+        kolorowanka();
         Button but1 = (Button) findViewById(R.id.button); int temp1 = 0;
         Button but2 = (Button) findViewById(R.id.button2); int temp2 = 0;
         Button but3 = (Button) findViewById(R.id.button3); int temp3 = 0;
@@ -84,34 +189,58 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
         Button but16 = (Button) findViewById(R.id.button16); int temp16 = 0;
 
 
-        if(isEmpty(but1)== false){temp1 = Integer.parseInt(but1.getText().toString(), 10);} else { temp1 = 0;}
-        if(isEmpty(but2)== false){temp2 = Integer.parseInt(but2.getText().toString(), 10);} else { temp2 = 0;}
-        if(isEmpty(but3)== false){temp3 = Integer.parseInt(but3.getText().toString(), 10);} else { temp3 = 0;}
-        if(isEmpty(but4)== false){temp4 = Integer.parseInt(but4.getText().toString(), 10);} else { temp4 = 0;}
+        if((isEmpty(but1)== false) && (isnot1(but1)==true)){temp1 = Integer.parseInt(but1.getText().toString(), 10);} else { temp1 = 0;}
+        if((isEmpty(but2)== false) && (isnot1(but2)==true)){temp2 = Integer.parseInt(but2.getText().toString(), 10);} else { temp2 = 0;}
+        if((isEmpty(but3)== false) && (isnot1(but3)==true)){temp3 = Integer.parseInt(but3.getText().toString(), 10);} else { temp3 = 0;}
+        if((isEmpty(but4)== false) && (isnot1(but4)==true)){temp4 = Integer.parseInt(but4.getText().toString(), 10);} else { temp4 = 0;}
 
-        if(isEmpty(but5)== false){temp5 = Integer.parseInt(but5.getText().toString(), 10);} else { temp5 = 0;}
-        if(isEmpty(but6)== false){temp6 = Integer.parseInt(but6.getText().toString(), 10);} else { temp6 = 0;}
-        if(isEmpty(but7)== false){temp7 = Integer.parseInt(but7.getText().toString(), 10);} else { temp7 = 0;}
-        if(isEmpty(but8)== false){temp8 = Integer.parseInt(but8.getText().toString(), 10);} else { temp8 = 0;}
+        if((isEmpty(but5)== false) && (isnot1(but5)==true)){temp5 = Integer.parseInt(but5.getText().toString(), 10);} else { temp5 = 0;}
+        if((isEmpty(but6)== false) && (isnot1(but6)==true)){temp6 = Integer.parseInt(but6.getText().toString(), 10);} else { temp6 = 0;}
+        if((isEmpty(but7)== false) && (isnot1(but7)==true)){temp7 = Integer.parseInt(but7.getText().toString(), 10);} else { temp7 = 0;}
+        if((isEmpty(but8)== false) && (isnot1(but8)==true)){temp8 = Integer.parseInt(but8.getText().toString(), 10);} else { temp8 = 0;}
 
-        if(isEmpty(but9)== false){temp9 = Integer.parseInt(but9.getText().toString(), 10);} else { temp9 = 0;}
-        if(isEmpty(but10)== false){temp10 = Integer.parseInt(but10.getText().toString(), 10);} else { temp10 = 0;}
-        if(isEmpty(but11)== false){temp11 = Integer.parseInt(but11.getText().toString(), 10);} else { temp11 = 0;}
-        if(isEmpty(but12)== false){temp12 = Integer.parseInt(but12.getText().toString(), 10);} else { temp12 = 0;}
+        if((isEmpty(but9)== false) && (isnot1(but9)==true)){temp9 = Integer.parseInt(but9.getText().toString(), 10);} else { temp9 = 0;}
+        if((isEmpty(but10)== false) && (isnot1(but10)==true)){temp10 = Integer.parseInt(but10.getText().toString(), 10);} else { temp10 = 0;}
+        if((isEmpty(but11)== false) && (isnot1(but11)==true)){temp11 = Integer.parseInt(but11.getText().toString(), 10);} else { temp11 = 0;}
+        if((isEmpty(but12)== false) && (isnot1(but12)==true)){temp12 = Integer.parseInt(but12.getText().toString(), 10);} else { temp12 = 0;}
 
-        if(isEmpty(but13)== false){temp13 = Integer.parseInt(but13.getText().toString(), 10);} else { temp13 = 0;}
-        if(isEmpty(but14)== false){temp14 = Integer.parseInt(but14.getText().toString(), 10);} else { temp14 = 0;}
-        if(isEmpty(but15)== false){temp15 = Integer.parseInt(but15.getText().toString(), 10);} else { temp15 = 0;}
-        if(isEmpty(but16)== false){temp16 = Integer.parseInt(but16.getText().toString(), 10);} else { temp16 = 0;}
+        if((isEmpty(but13)== false) && (isnot1(but13)==true)){temp13 = Integer.parseInt(but13.getText().toString(), 10);} else { temp13 = 0;}
+        if((isEmpty(but14)== false) && (isnot1(but14)==true)){temp14 = Integer.parseInt(but14.getText().toString(), 10);} else { temp14 = 0;}
+        if((isEmpty(but15)== false) && (isnot1(but15)==true)){temp15 = Integer.parseInt(but15.getText().toString(), 10);} else { temp15 = 0;}
+        if((isEmpty(but16)== false) && (isnot1(but16)==true)){temp16 = Integer.parseInt(but16.getText().toString(), 10);} else { temp16 = 0;}
 
 
             score = temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + temp10 + temp11 + temp12 + temp13 + temp14+ temp15 + temp16;
             TextView punkty = (TextView) findViewById(R.id.score_text);
             punkty.setText(""+score);
+        if (Sprawdzpelne()==true) {
+            popup();
+
+        }
 
     }
-
-
+    public void popup(){
+        new AlertDialog.Builder(this)
+                .setTitle("Koniec gry")
+                .setMessage("Czy chcesz zapisac wynik gry")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent ii=new Intent(GameActivity.this, scoreActivity.class);
+                        ii.putExtra("name", name);
+                        ii.putExtra("score", score);
+                        finish();
+                        startActivity(ii);
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                       Intent ii=new Intent(GameActivity.this, StartActivity.class);
+                        startActivity(ii);
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+    }
     public void ruch(Button but1, Button but2, Button but3, Button but4) {
 
 
@@ -190,9 +319,6 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
             }
 
         }
-
-
-
     public void losuj(){
 
         Button but1 = (Button) findViewById(R.id.button);
@@ -211,6 +337,7 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
         Button but14 = (Button) findViewById(R.id.button14);
         Button but15 = (Button) findViewById(R.id.button15);
         Button but16 = (Button) findViewById(R.id.button16);
+
 
         int min = 1;
         int max = 16;
@@ -308,7 +435,7 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
 
             default:
 
-                losuj();
+
 
 
              }
@@ -324,24 +451,32 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
         name = (String) b.get("name");
-        TextView da = (TextView) findViewById(R.id.textView);
-        da.setText(name);
+        if (Sprawdzpelne()==true) {
+            popup();
+
+        }
 
         detector = new SimpleGestureFilter(this,this);
         Button koniec = (Button) findViewById(R.id.but_end);
         koniec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ii=new Intent(GameActivity.this, scoreActivity.class);
+                popup();
 
-               ii.putExtra("name", name);
-                ii.putExtra("score", score);
-
-                startActivity(ii);
             }
         });
-        losuj();
+
+        Button reset = (Button) findViewById(R.id.but_reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                wyczysc();
+
+            }
+        });
+
         if (Sprawdzpelne()==true){Intent intent = new Intent(GameActivity.this, scoreActivity.class); startActivity(intent); }
+
 
 }
     @Override
@@ -376,6 +511,7 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
 
             case SimpleGestureFilter.SWIPE_RIGHT : str = "Swipe Right";
                 if(Sprawdzpelne()== false){
+                    sound();
                     ruch(but4, but3, but2, but1);
                     ruch(but8, but7, but6, but5);
                     ruch(but12, but11, but10, but9);
@@ -385,6 +521,7 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
                 } break;
             case SimpleGestureFilter.SWIPE_LEFT :  str = "Swipe Left";
                 if(Sprawdzpelne()== false){
+                    sound();
                     ruch(but1, but2, but3, but4);
                     ruch(but5, but6, but7, but8);
                     ruch(but9, but10, but11, but12);
@@ -394,6 +531,7 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
                 } break;
             case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
                 if(Sprawdzpelne()== false){
+                    sound();
                     ruch(but13, but9, but5, but1);
                     ruch(but14, but10, but6, but2);
                     ruch(but15, but11, but7, but3);
@@ -403,11 +541,13 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
                 } break;
             case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
                 if(Sprawdzpelne()== false){
+                    sound();
                     ruch(but1, but5, but9, but13);
                     ruch(but2, but6, but10, but14);
                     ruch(but3, but7, but11, but15);
                     ruch(but4, but8, but12, but16);
                     losuj();
+
                     zliczpunkt();
                 } break;
 

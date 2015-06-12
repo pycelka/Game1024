@@ -33,15 +33,14 @@ public class scoreActivity extends ActionBarActivity {
 
 
     public void parse( ){
-        ParseObject Parse = new ParseObject("TestObject");
+        ParseObject Parse = new ParseObject("GameScore");
         Parse.put("name", name);
         Parse.put("score", score);
         Parse.saveInBackground();
 
 
     }
-    public void wyswietlnie()
-    {
+    public void wyswietlnie()    {
 
         records = (TextView)findViewById(R.id.textView2);
         ParseQuery<ParseObject> query = ParseQuery.getQuery("GameScore");
@@ -68,7 +67,7 @@ public class scoreActivity extends ActionBarActivity {
                     for (int i = 0; i < countO; i++) {
                         listName[i] = list.get(i).getString("name");
                         listScore[i] = list.get(i).getNumber("score");
-                        records.append(listName[i] + " :  " + listScore[i] + "  -  ");
+                        records.append(listName[i] + " :  " + listScore[i]);
                         records.append("\n");
                     }
                 }
@@ -80,7 +79,6 @@ public class scoreActivity extends ActionBarActivity {
 
 
     }
-
     public void getnamescore() {
         Intent iin= getIntent();
         Bundle b = iin.getExtras();

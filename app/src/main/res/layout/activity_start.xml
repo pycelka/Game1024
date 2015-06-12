@@ -28,9 +28,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/name_text"
         android:text="Nickname"
-        android:layout_marginBottom="108dp"
-        android:layout_above="@+id/start_button"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/but_wyniki"
+        android:layout_alignEnd="@+id/name_button"
+        android:layout_marginTop="31dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -40,5 +40,14 @@
         android:id="@+id/but_wyniki"
         android:layout_below="@+id/name_button"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nick:"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/name_text"
+        android:layout_toStartOf="@+id/but_wyniki" />
 
 </RelativeLayout>

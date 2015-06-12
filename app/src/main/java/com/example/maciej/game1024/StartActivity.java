@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,13 +21,13 @@ import java.util.Random;
 
 public class StartActivity extends ActionBarActivity {
     public static int score = 0;
-    public static String name = null;
+    public static String name = "";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
+               setContentView(R.layout.activity_start);
         final Context context = this;
         Random rand = new Random();
         int value = rand.nextInt(1000000+432424);
@@ -47,11 +49,11 @@ public class StartActivity extends ActionBarActivity {
         wyniki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, scoreActivity.class);
-                intent.putExtra ("name", name);
-                intent.putExtra("score", score);
+                Intent ii=new Intent(StartActivity.this, scoreActivity.class);
 
-                startActivity(intent);
+                ii.putExtra("name", name);
+                ii.putExtra("score", score);
+                startActivity(ii);
             }
         });
 
