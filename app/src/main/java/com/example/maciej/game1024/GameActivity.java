@@ -20,8 +20,13 @@ import java.util.Random;
 
 public class GameActivity extends Activity implements SimpleGestureListener  {
     private SimpleGestureFilter detector;
-    public static int score;
-    public static String name;
+    public static int score = 0;
+    public static String name = null;
+
+    public void wyczysc()
+    {
+
+    }
 
     public boolean isEmpty(Button etText) {
         if (etText.getText().toString().trim().length() > 0) {
@@ -313,25 +318,30 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        Intent i= getIntent();
-        name = i.getStringExtra("name");
-
-
         setContentView(R.layout.activity_game);
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+        name = (String) b.get("name");
+        TextView da = (TextView) findViewById(R.id.textView);
+        da.setText(name);
+
         detector = new SimpleGestureFilter(this,this);
         Button koniec = (Button) findViewById(R.id.but_end);
         koniec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GameActivity.this, Scores.class);
-                intent.putExtra ("name", name);
-                intent.putExtra("score", score);
-                startActivity(intent);
+                Intent ii=new Intent(GameActivity.this, scoreActivity.class);
+
+               ii.putExtra("name", name);
+                ii.putExtra("score", score);
+
+                startActivity(ii);
             }
         });
         losuj();
-        if (Sprawdzpelne()==true){Intent intent = new Intent(GameActivity.this, Scores.class); startActivity(intent); }
+        if (Sprawdzpelne()==true){Intent intent = new Intent(GameActivity.this, scoreActivity.class); startActivity(intent); }
 
 }
     @Override

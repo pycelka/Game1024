@@ -18,8 +18,8 @@ import java.util.Random;
 
 
 public class StartActivity extends ActionBarActivity {
-    public static int score;
-    public static String name;
+    public static int score = 0;
+    public static String name = null;
 
 
     @Override
@@ -35,10 +35,11 @@ public class StartActivity extends ActionBarActivity {
         startbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, GameActivity.class);
+                Intent ii=new Intent(StartActivity.this, GameActivity.class);
+
                 String name = nick.getText().toString();
-                intent.putExtra("name", name);
-                startActivity(intent);
+                ii.putExtra("name", name);
+                startActivity(ii);
             }
         });
 
@@ -46,7 +47,7 @@ public class StartActivity extends ActionBarActivity {
         wyniki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, Scores.class);
+                Intent intent = new Intent(StartActivity.this, scoreActivity.class);
                 intent.putExtra ("name", name);
                 intent.putExtra("score", score);
 
