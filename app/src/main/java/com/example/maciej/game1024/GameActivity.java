@@ -281,7 +281,7 @@ public class GameActivity extends Activity implements SimpleGestureListener  {
                 but2.setText("" + temp);
                 but4.setText("");
             }
-            if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == false) & (isEmpty(but2) == false)) {
+            if ((but1.getText().toString().equals(but4.getText().toString()) == true) & (isEmpty(but1) == false) & (isEmpty(but4) == false) & (isEmpty(but3) == true) & (isEmpty(but2) == true)) {
                 int temp1 = Integer.parseInt(but1.getText().toString(), 10);
                 int temp2 = Integer.parseInt(but4.getText().toString(), 10);
                 int temp = temp1 + temp2;
